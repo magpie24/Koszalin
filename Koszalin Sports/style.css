@@ -1,0 +1,276 @@
+/* Global Settings */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+  --dark: #303030;
+  --light: #FFFFFF;
+  --magenta: #F000BC;
+}
+
+
+@media only screen and (max-width: 760px) {
+    h1{
+        font-size: 36px;
+    }
+
+    h2{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+}
+
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+html {
+    font-size: 10px;
+    overflow-x: hidden;
+    font-family: 'Khand';
+    scroll-behavior: smooth;
+    scroll-padding-top: 2s0px;
+}
+
+/* Nav Styling */
+
+.menulogo{
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.left-section {
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.logo {
+    width: 200px;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px; 
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative;
+    padding: .2em;
+    color: var(--light);
+    margin-right: 50px;
+}
+
+ul a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: var(--magenta);
+    height: .15em;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+
+nav {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 2em;
+    position: fixed;
+    z-index: 10000;
+    width: 100vw;
+}
+
+nav.sticky {
+    z-index: 10000000;
+}
+
+ul a:hover::after{
+    width: 100%;
+}
+
+
+
+/* Burger Styling */
+
+.burger {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.line{
+    width: 3em;
+    height: .3em;
+    background: var(--light);
+    margin: .7em;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+@media only screen and (max-width: 1000px) {
+    .logo{
+        margin-left: 0;
+    }
+
+
+    .burger {
+        display: block;
+        transition: .3s ease-in-out;
+    }
+
+    .burger.active .line:first-child{
+        transform: translateY(-300px);
+    }
+
+    .burger.active .line:nth-child(2){
+        transform: rotate(-405deg) translateY(8px);
+    }
+
+    .burger.burger.active .line:nth-child(3) {
+        transform: rotate(-320deg) translateY(-10px);
+    }
+
+    ul {
+        position: absolute;
+        right: 0;
+        top: 8vh;
+        background: var(--dark);
+        height: 92vh;
+        flex-direction: column;
+        text-align: center;
+        transform: translate(100%);
+        transition: .3s ease-in-out;
+    }
+
+    ul.active {
+        transform: translate(0%);
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    ul {
+        width: 100%;
+    }
+}
+
+/* Banner */
+
+.banner{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-image: url("img/bannerkoszalin.png");
+    background-size: cover;
+    margin-top: 3%;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.slogan{
+    width: 60vw;
+    height: auto;
+    padding-top: 8vw;
+    padding-bottom: 10vw;
+}
+
+.arrows {
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    z-index: 0;
+  }
+
+
+  @media only screen and (max-width: 1500px) {
+    .banner {
+      height: 100vh;
+      width: auto;
+    }
+  
+    .slogan {
+      width: 90vw; /* Adjust the width for smaller screens */
+      max-width: 700px; /* Set a maximum width to prevent it from stretching too much */
+      height: auto;
+      padding-top: 2vw;
+      padding-bottom: 10vw;
+    }
+  
+    .arrows {
+      bottom: 10px;
+      z-index: 1; /* Ensure arrows are above the slogan */
+    }
+  }
+  
+  @media only screen and (max-width: 760px) {
+  
+    .slogan{
+        width: 90vw;
+        padding-bottom: 100px;
+        padding-top: 200px;
+        height: 70vh;
+       
+    }
+
+    .arrows {
+      bottom: 10px;
+      z-index: 1; /* Ensure arrows are above the slogan */
+    }
+  }
+  
+  /* Explore */
+
+.headline {
+  font-family: 'Racing Sans One';
+  color: var(--dark);
+  font-size: 64px;
+  margin-left: 30vw;
+  position: relative;
+  line-height: 10%;
+}
+
+.mark {
+    width: 50vw;
+    height: 50px;
+    position: absolute;
+}
+
+.headmark {
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 10%;
+}

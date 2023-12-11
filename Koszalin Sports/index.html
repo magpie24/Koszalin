@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://fonts.googleapis.com/css?family=Racing Sans One' rel='stylesheet'>    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Khand' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Move Your Body in Koszalin</title>
+</head>
+
+
+
+<body>
+
+<!-- Nav Menu -->
+<nav>
+    <div class="left-section">
+    <ul>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    </div>
+    <a href="#"><img class="logo" src="img/koszalinlogo.png" alt="Koszalin Logo"></a>
+
+    <button class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </button>
+</nav>
+
+<!-- Banner -->
+
+<div class="banner">
+    <img class="slogan" src="img/slogan.png">
+
+    <button class="arrows">
+        <img src="img/arrows.png" alt="Arrows Down">
+    </button>
+</div>
+
+<!-- Explore -->
+
+<div class="headmark">
+<img class="mark" src="img/Rectangle.png">
+<h1 class="headline">Explore</h1>
+</div>
+
+
+
+<!-- JavaScript -->
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const burger = document.querySelector(".burger");
+        const navUl = document.querySelector("ul");
+    
+        // Script for menu
+        burger.addEventListener("click", function () {
+            burger.classList.toggle("active");
+            navUl.classList.toggle("active");
+        });
+    
+        navUl.addEventListener("click", function (event) {
+            if (event.target.tagName === "A") {
+                burger.classList.remove("active");
+                navUl.classList.remove("active");
+            }
+        });
+    
+        // Script for sticking the nav
+        window.addEventListener('scroll', function(){
+            var nav = document.querySelector('nav');
+            nav.classList.toggle('sticky', window.scrollY > 0);
+        });
+    
+        // Script for Scroll Top Button
+        var scrollTopBtn = document.getElementById("scrollTopBtn");
+    
+        window.onscroll = function() {
+            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
+        };
+    
+        scrollTopBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    });
+    
+    </script>
+
+    </body>
+    </html>
