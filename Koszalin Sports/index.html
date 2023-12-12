@@ -28,9 +28,9 @@
     <a href="#"><img class="logo" src="img/koszalinlogo.png" alt="Koszalin Logo"></a>
 
     <button class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
+        <div class="line"><img src="img/Rectangle 29 (1).png"></div>
+        <div class="line"><img src="img/Rectangle 28 (2).png"></div>
+        <div class="line"><img src="img/Rectangle 30 (1).png"></div>
     </button>
 </nav>
 
@@ -53,7 +53,46 @@
 
 <!-- Places -->
 
+<div class="places">
+
+<a href="#" class="watercard">
 <img class="water" src="img/image 4.png">
+
+<div class="watervalley">
+    <p>The Water Valley</p>
+    <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>    Sybiraków 7</p>
+</div>
+</a>
+
+<a href="#" class="watercard">
+<img class="water" src="img/image 5.png">
+    
+    <div class="watervalley">
+        <p>The Sports Valley</p>
+        <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>    Podgrodzie</p>
+    </div>
+</a>
+
+<a href="#" class="watercard">
+<img class="water" src="img/image 6.png">
+        
+        <div class="watervalley">
+            <p>Robin Hood Park</p>
+            <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>  Sybiraków 7</p>
+        </div>
+</a>
+
+
+<a href="#" class="watercard">
+<img class="water" src="img/image 7.png">
+            
+         <div class="watervalley">
+                <p>Chełmska Mountain</p>
+                <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>  Sybiraków 7</p>
+         </div>
+</a>
+
+</div>
 
 <!-- Blog -->
 
@@ -72,6 +111,12 @@
 
 <a href="#"><img class="breaks" src="img/Group 42.png"></a>
 </div>
+
+<div class="container2">
+<a href="#"><img class="skates" src="img/Group 38.png"></a>
+<a href="#"><img class="rollers" src="img/Group 39.png"></a>
+</div>
+
 </div>
 
 <div class="Morer">
@@ -139,6 +184,38 @@
   window.scrollBy(0, 300);
 });
     
+// Pobierz elementy do manipulacji
+var morerLink = document.querySelector('.Morer .More');
+       var container2 = document.querySelector('.container2');
+
+//         // Ustaw obsługę zdarzenia kliknięcia na elemencie More
+//         morerLink.addEventListener('click', function(event) {
+//             event.preventDefault();
+
+//             // Sprawdź aktualny stan widoczności
+//             var isVisible = container2.style.display !== 'none';
+
+//             // Zmiana stanu widoczności na przeciwny
+//             container2.style.display = isVisible ? 'none' : 'block';
+
+//             // Zmiana tekstu w zależności od stanu widoczności
+//             morerLink.textContent = isVisible ? 'Read More' : 'Show Less';
+//         });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var morerLink = document.querySelector('.Morer .More');
+            var container2 = document.querySelector('.container2');
+
+            morerLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                var isVisible = container2.style.display !== 'none';
+
+                container2.style.display = isVisible ? 'none' : 'flex';
+                morerLink.textContent = isVisible ? 'Read More' : 'Show Less';
+            });
+        });
+
+
     </script>
 
     </body>

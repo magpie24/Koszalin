@@ -12,10 +12,14 @@
   --magenta: #F000BC;
 }
 
+p{
+    font-size: 20px;
+}
+
 
 @media only screen and (max-width: 760px) {
-    h1{
-        font-size: 36px;
+    .headmark{
+        font-size: 12px;
     }
 
     h2{
@@ -125,16 +129,19 @@ ul a:hover::after{
     outline: none;
     cursor: pointer;
     display: none;
+    text-align: end;
 }
 
 .line{
-    width: 3em;
+    /* width: 3em;
     height: .3em;
-    background: var(--light);
-    margin: .7em;
-    border-radius: 20px;
+    background: var(--light); */
+    /* margin: .7em; */
+    /* border-radius: 20px; */
     transition: .3s ease-in-out;
+    margin-top: -3px;
 }
+
 
 @media only screen and (max-width: 1000px) {
     .logo{
@@ -276,6 +283,64 @@ ul a:hover::after{
   padding-bottom: 8%;
 }
 
+.watercard{
+    width: 40vw;
+}
+
+.water{
+    opacity: 1;
+    transition: transform 0.2s ease-in-out;
+}
+
+.water:hover{
+    opacity: 0.8;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+.watervalley{
+    width: 100%;
+    height: auto;
+    display: block;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.watercard {
+    text-decoration: none;
+}
+
+.places{
+    justify-content: center;
+    max-width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 40px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .places{
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .watercard img{
+        width: 90vw;
+    }
+
+    .watercard{
+        width: 90vw;
+        margin: auto;
+    }
+}
+
+
+
 /* Scroll Top Button */
 
 .goup {
@@ -349,7 +414,7 @@ ul a:hover::after{
 .runner{
     justify-content: center;
     width: 41vw;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     opacity: 0.6;
 }
 
@@ -373,13 +438,13 @@ ul a:hover::after{
 
 .bike{
     width: 40vw;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     opacity: 0.6;
 }
 
 .breaks{
     width: 40vw;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.2s ease-in-out;
     opacity: 0.6;
 }
 
@@ -436,3 +501,57 @@ ul a:hover::after{
     opacity: 0.8;
     transition: ease-in-out .2s;
 }
+
+.container2{
+    display: none;
+    width: 90vw;
+    flex-wrap: wrap;
+    /* display: flex; */
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skates{
+    width: 41vw;
+    margin-right: 7px;
+    height: 99%;
+    transition: transform 0.2s ease-in-out;
+    opacity: 0.6;
+}
+
+.rollers{
+    width: 40vw;
+    transition: transform 0.2s ease-in-out;
+    opacity: 0.6;
+}
+
+.skates:hover{
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+.rollers:hover{
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+
+@media only screen and (max-width: 760px) {
+    .rollers{
+        width: 90vw;
+        padding: 10px;
+    }
+
+    .skates{
+            width: 90vw;
+            padding: 10px;
+            height: auto;     
+    }  
+
+    .container2{
+        width: 90vw;
+    }
+
+    }
