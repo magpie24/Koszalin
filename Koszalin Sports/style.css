@@ -273,4 +273,166 @@ ul a:hover::after{
   flex-wrap: wrap;
   position: relative;
   padding-top: 10%;
+  padding-bottom: 8%;
+}
+
+/* Scroll Top Button */
+
+.goup {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--dark);
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: var(--light);
+    font-size: 22px;
+
+    display: none; /* Initially hide the button */
+}
+
+#box{
+    width: 100vw;
+    height: 2000px;
+    background-color: aqua;
+}
+
+.water{
+    width: 40vw;
+}
+
+/* Blog */
+
+.headline2 {
+    font-family: 'Racing Sans One';
+    color: var(--light);
+    font-size: 64px;
+    text-align: center;
+    position: relative;
+    line-height: 10%;
+  }
+  
+  .mark2 {
+      width: 70vw;
+      height: 50px;
+      position: absolute;
+      right: 0;
+  }
+  
+  .headmark2 {
+    flex-wrap: wrap;
+    position: relative;
+    padding-bottom: 8%;
+  }
+
+  .blog{
+    width: 100vw;
+    height: auto;
+    padding-top: 60px;
+    background-color: var(--dark);
+    margin-top: 60px;
+  }
+
+  .container{
+    flex-wrap: wrap;
+    display: flex;
+    width: 40vw;
+    gap: 0px;
+    justify-content: center;
+  }
+
+.runner{
+    justify-content: center;
+    width: 41vw;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+}
+
+.runner:hover{
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+.bike:hover{
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+.breaks:hover{
+    opacity: 1;
+    transition: opacity ease-in-out .2s;
+    transform: translateY(-5px);
+}
+
+.bike{
+    width: 40vw;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+}
+
+.breaks{
+    width: 40vw;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.6;
+}
+
+  .calendar{
+    width: 100vw;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  @media only screen and (max-width: 760px) {
+    .bike{
+        width: 90vw;
+        padding: 10px;
+      }
+
+    .breaks{
+        width: 90vw;
+        padding: 10px;
+    }
+
+    .runner{
+            width: 90vw;
+            padding: 10px;  
+            margin-top: 20px;     
+    }  
+
+    .container{
+        width: 90vw;
+    }
+
+    }
+
+.More{
+    font-family: 'Khand';
+    font-size: 24px;
+    color: var(--light);
+    text-decoration: none;
+    background-color: var(--magenta);
+    padding: 5px;
+}
+
+.Morer {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  
+
+.More:hover{
+    opacity: 0.8;
+    transition: ease-in-out .2s;
 }

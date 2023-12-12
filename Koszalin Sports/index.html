@@ -39,7 +39,7 @@
 <div class="banner">
     <img class="slogan" src="img/slogan.png">
 
-    <button class="arrows">
+    <button class="arrows" id="przesunButton">
         <img src="img/arrows.png" alt="Arrows Down">
     </button>
 </div>
@@ -51,7 +51,42 @@
 <h1 class="headline">Explore</h1>
 </div>
 
+<!-- Places -->
 
+<img class="water" src="img/image 4.png">
+
+<!-- Blog -->
+
+<div class="blog">
+<div class="headmark2">
+    <img class="mark2" src="img/Rectangle 27.png">
+    <h1 class="headline2">Blog</h1>
+    </div>
+
+
+<div class="calendar">   
+<a href="#"><img class="runner" src="img/runner.png"></a>
+
+<div class="container">
+<a href="#"><img class="bike" src="img/Group 41.png"></a>
+
+<a href="#"><img class="breaks" src="img/Group 42.png"></a>
+</div>
+</div>
+
+<div class="Morer">
+<a href="#" class="More">Read More</a>
+</div>
+
+</div>
+
+
+<div id="box"></div>
+ 
+
+<!-- Scroll Top Button -->
+
+<a class="goup" href="#" id="scrollTopBtn"><i class="fa-solid fa-chevron-up"></i></a>
 
 <!-- JavaScript -->
 <script>
@@ -98,6 +133,11 @@
             });
         });
     });
+
+    document.getElementById('przesunButton').addEventListener('click', function() {
+  // The buttons scrolls you down 300 px
+  window.scrollBy(0, 300);
+});
     
     </script>
 
