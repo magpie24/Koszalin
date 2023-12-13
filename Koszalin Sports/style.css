@@ -10,6 +10,7 @@
   --dark: #303030;
   --light: #FFFFFF;
   --magenta: #F000BC;
+  --lime: #ADFF00;
 }
 
 p{
@@ -285,11 +286,13 @@ ul a:hover::after{
 
 .watercard{
     width: 40vw;
+    position: relative;
 }
 
 .water{
     opacity: 1;
     transition: transform 0.2s ease-in-out;
+    position: relative;
 }
 
 .water:hover{
@@ -306,11 +309,38 @@ ul a:hover::after{
     background-color: var(--dark);
     padding: 10px;
     padding-left: 20px;
+    position: relative;
 }
 
 .watercard {
     text-decoration: none;
+    position: relative;
 }
+
+.overlay {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    background-color: transparent;
+    padding: 10px;
+    text-align: center;
+    color: var(--light);
+  }
+  
+.overlay-text{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+
+  .water:hover + .overlay,
+  .overlay:hover {
+    opacity: 1;
+  }
+
 
 .places{
     justify-content: center;
@@ -339,28 +369,35 @@ ul a:hover::after{
     }
 }
 
-
-
-/* Scroll Top Button */
-
-.goup {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background: var(--dark);
-    bottom: 40px;
-    right: 50px;
-    border-radius: 50%;
-
-    text-decoration: none;
-    text-align: center;
-    line-height: 50px;
+.read{
+    font-size: 18px;
+    background-color: var(--magenta);
     color: var(--light);
-    font-size: 22px;
-
-    display: none; /* Initially hide the button */
+    text-align: center;
+    padding: 5px;
+    margin-top: 10px;
+    display: none;
 }
 
+.read:hover{
+    background-color: #c20499;
+    transition: ease-in-out .2s;
+}
+
+@media only screen and (max-width: 760px) {
+    .watervalley{
+        text-align: center;
+    }
+    
+    .title{
+        font-size: 20px;
+    }
+    }
+
+    .read{
+        display: block;
+    }
+    
 #box{
     width: 100vw;
     height: 2000px;
@@ -370,6 +407,7 @@ ul a:hover::after{
 .water{
     width: 40vw;
 }
+
 
 /* Blog */
 
@@ -393,6 +431,7 @@ ul a:hover::after{
     flex-wrap: wrap;
     position: relative;
     padding-bottom: 8%;
+    padding-top: 2%;
   }
 
   .blog{
@@ -400,7 +439,8 @@ ul a:hover::after{
     height: auto;
     padding-top: 60px;
     background-color: var(--dark);
-    margin-top: 60px;
+    margin-top: 10%;
+    padding-bottom: 8%;
   }
 
   .container{
@@ -555,3 +595,57 @@ ul a:hover::after{
     }
 
     }
+
+
+    /* Scroll Top Button */
+
+.goup {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: var(--dark);
+    bottom: 40px;
+    right: 50px;
+    border-radius: 50%;
+
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: var(--light);
+    font-size: 22px;
+
+    display: none; /* Initially hide the button */
+}
+
+/* Footer */
+
+footer{
+    width: 100vw;
+    height: auto;
+    background-color: var(--lila);
+    padding-top: 30px;
+    margin-top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer-content h3{
+    font-size: 2.4rem;
+    line-height: 3rem;
+    color: var(--text);
+}
+
+#copy{
+    font-size: 12px;
+    padding: 10px;
+}

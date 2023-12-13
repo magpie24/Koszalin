@@ -55,40 +55,66 @@
 
 <div class="places">
 
-<a href="#" class="watercard">
+
+<a href="watervalley.html" class="watercard">
 <img class="water" src="img/image 4.png">
 
+<div class="overlay">
+    <p class="overlay-text">Click to Read More</p>
+  </div>
+
 <div class="watervalley">
-    <p>The Water Valley</p>
+    <p class="title">The Water Valley</p>
     <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>    Sybiraków 7</p>
+
+    <div class="read">Read More</div>
 </div>
 </a>
+
 
 <a href="#" class="watercard">
 <img class="water" src="img/image 5.png">
     
+<div class="overlay">
+    <p class="overlay-text">Click to Read More</p>
+  </div>
+
     <div class="watervalley">
-        <p>The Sports Valley</p>
+        <p class="title">The Sports Valley</p>
         <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>    Podgrodzie</p>
+
+        <div class="read">Read More</div>
     </div>
 </a>
 
 <a href="#" class="watercard">
 <img class="water" src="img/image 6.png">
-        
+
+<div class="overlay">
+    <p class="overlay-text">Click to Read More</p>
+  </div>
+
         <div class="watervalley">
-            <p>Robin Hood Park</p>
-            <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>  Sybiraków 7</p>
+            <p class="title">Robin Hood Park</p>
+            <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>   Racławicka 17</p>
+
+            <div class="read">Read More</div>
         </div>
 </a>
 
 
 <a href="#" class="watercard">
 <img class="water" src="img/image 7.png">
-            
+
+<div class="overlay">
+    <p class="overlay-text">Click to Read More</p>
+  </div>
+
          <div class="watervalley">
-                <p>Chełmska Mountain</p>
-                <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>  Sybiraków 7</p>
+                <p class="title">Chełmska Mountain</p>
+                <p><i class="fa-solid fa-location-dot" style="color: #f000bc;"></i>   Chełmska Mountain Koszalin</p>
+
+                <div class="read">Read More</div>
          </div>
 </a>
 
@@ -125,98 +151,39 @@
 
 </div>
 
-
-<div id="box"></div>
  
+<footer>
+    <div class="footer-content">
+        <h3>Move Your Body in Koszalin</h3>
+        <br>
+        <p>Fantastic Spots for Sport in Koszalin</p>
+        <br>
+        <p> This website was created as an exam project for Fall 2023 at Business Academy Aarhus, Denmark</p>
+        <p> Designed & Programmed by Magdalena Pietraś</p>
+
+
+        <!-- <div class="SoMe">
+            <a href="https://www.facebook.com/domjogislupsk" target="_blank"><i class="fa-brands fa-facebook"></i></a> 
+            <a href="https://instagram.com/dom_jogi_jm?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://youtube.com/@lightenergyyoga4107?si=nh5sG19y1XOU1WaB" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div> -->
+
+    <br>
+    <br>
+    <br>
+    <p id="copy">Copyright 2023</p>
+    <br>
+    </div>
+</footer>
+
+
 
 <!-- Scroll Top Button -->
 
 <a class="goup" href="#" id="scrollTopBtn"><i class="fa-solid fa-chevron-up"></i></a>
 
 <!-- JavaScript -->
-<script>
-
-    document.addEventListener("DOMContentLoaded", function () {
-        const burger = document.querySelector(".burger");
-        const navUl = document.querySelector("ul");
-    
-        // Script for menu
-        burger.addEventListener("click", function () {
-            burger.classList.toggle("active");
-            navUl.classList.toggle("active");
-        });
-    
-        navUl.addEventListener("click", function (event) {
-            if (event.target.tagName === "A") {
-                burger.classList.remove("active");
-                navUl.classList.remove("active");
-            }
-        });
-    
-        // Script for sticking the nav
-        window.addEventListener('scroll', function(){
-            var nav = document.querySelector('nav');
-            nav.classList.toggle('sticky', window.scrollY > 0);
-        });
-    
-        // Script for Scroll Top Button
-        var scrollTopBtn = document.getElementById("scrollTopBtn");
-    
-        window.onscroll = function() {
-            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-                scrollTopBtn.style.display = "block";
-            } else {
-                scrollTopBtn.style.display = "none";
-            }
-        };
-    
-        scrollTopBtn.addEventListener("click", function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    });
-
-    document.getElementById('przesunButton').addEventListener('click', function() {
-  // The buttons scrolls you down 300 px
-  window.scrollBy(0, 300);
-});
-    
-// Pobierz elementy do manipulacji
-var morerLink = document.querySelector('.Morer .More');
-       var container2 = document.querySelector('.container2');
-
-//         // Ustaw obsługę zdarzenia kliknięcia na elemencie More
-//         morerLink.addEventListener('click', function(event) {
-//             event.preventDefault();
-
-//             // Sprawdź aktualny stan widoczności
-//             var isVisible = container2.style.display !== 'none';
-
-//             // Zmiana stanu widoczności na przeciwny
-//             container2.style.display = isVisible ? 'none' : 'block';
-
-//             // Zmiana tekstu w zależności od stanu widoczności
-//             morerLink.textContent = isVisible ? 'Read More' : 'Show Less';
-//         });
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var morerLink = document.querySelector('.Morer .More');
-            var container2 = document.querySelector('.container2');
-
-            morerLink.addEventListener('click', function(event) {
-                event.preventDefault();
-                var isVisible = container2.style.display !== 'none';
-
-                container2.style.display = isVisible ? 'none' : 'flex';
-                morerLink.textContent = isVisible ? 'Read More' : 'Show Less';
-            });
-        });
-
-
-    </script>
+<script src="js.js"></script>
 
     </body>
     </html>
