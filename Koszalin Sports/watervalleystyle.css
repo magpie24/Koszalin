@@ -36,7 +36,28 @@ p{
     }
 }
 
+.arrows {
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none; 
+    cursor: pointer;
+    z-index: 0;
+    display: none;
+  }
 
+
+  @media only screen and (max-width: 760px) {
+
+    .arrows {
+      bottom: 10px;
+      display: block;
+      z-index: 1; /* Ensure arrows are above the slogan */
+    }
+  } 
 
 body{
     min-height: 100vh;
@@ -233,7 +254,17 @@ ul a:hover::after{
     padding-left: 30px;
 }
 
+.back{
+    position: absolute;
+    margin-top: 8%;
+}
+
 /* About / Descpription */
+.desc{
+    padding-left: 8%;
+}
+
+
 .about{
     width: 60vw;
     text-align: left;
@@ -249,6 +280,16 @@ ul a:hover::after{
     flex-wrap: wrap;
     flex-direction: row;
     display: flex;
+    gap: 15%;
+}
+
+.about3{
+    width: 90vw;
+    padding-top: 1%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    padding-left: 10%;
     gap: 15%;
 }
 
@@ -270,6 +311,120 @@ ul a:hover::after{
     padding-top: 2%;
 }
 
+@media only screen and (max-width: 1132px) {
+    .map, .mapp{
+        width: 60vw;
+        height: 300px;
+        margin-top: 2%;
+    }
+
+    .text1{
+        width: 60vw;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+
+    .address{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        max-width: 80vw;
+        justify-content: center;
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .street{
+        padding: 0;
+        text-align: center;
+    }
+
+    .text{
+        width: 80vw;
+        padding-top: 1%;
+        font-size: 16px;
+    }
+
+    .about3{
+        padding-left: 0;
+        font-size: 16px;
+    }
+
+    .list p{
+        font-size: 16px;
+    }
+
+    .list{
+        text-align: left;
+    }
+
+    .el2{
+        padding-top: 4%;
+    }
+
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .map, .mapp{
+        width: 80vw;
+        height: 300px;
+        margin-top: 2%;
+        justify-content: center;
+    }
+
+    .about, .el, .el2, .about2{
+        padding-left: 0;
+        margin-left: 0;
+        align-items: left;
+        justify-content: flex-start;
+    }
+
+    .mark{
+        left: 0;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .back{
+        margin-top: 15%;
+    }
+
+    .headline{
+        position: absolute;
+        top: 240px;
+        color: var(--light);
+    }
+
+    .bannermobile{
+        
+    }
+}
+
+
+
+
+ /* Scroll Top Button */
+
+    .goup {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background: var(--dark);
+        bottom: 40px;
+        right: 50px;
+        border-radius: 50%;
+    
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        color: var(--light);
+        font-size: 22px;
+    
+        display: none; /* Initially hide the button */
+    }
 
 /* Footer */
 
