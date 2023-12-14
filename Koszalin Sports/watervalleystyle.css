@@ -216,7 +216,7 @@ ul a:hover::after{
     font-family: 'Racing Sans One';
     font-size: 64px;
     padding: 5px;
-    padding-left: 30px;
+    padding-left: 5%;
 }
 
 .address{
@@ -233,18 +233,57 @@ ul a:hover::after{
     padding-left: 30px;
 }
 
+/* About / Descpription */
+.about{
+    width: 60vw;
+    text-align: left;
+    justify-content: center;
+    padding-top: 5%;
+    padding-left: 30px;
+}
+
+.about2{
+    width: 100vw;
+    padding-top: 5%;
+    padding-left: 8%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    display: flex;
+    gap: 15%;
+}
+
+
+.text{
+    padding-left: 13%;
+}
+
+.mark{
+    padding-left: 13%;
+    padding-bottom: 2%;
+}
+
+.list{
+    display: block;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 13%;
+    padding-top: 2%;
+}
+
+
 /* Footer */
 
 footer{
     width: 100vw;
     height: auto;
-    background-color: var(--lila);
+    background-color: var(--dark);
     padding-top: 30px;
-    margin-top: 60px;
+    margin-top: 100px;
     left: 0;
     right: 0;
     bottom: 0;
     position: relative;
+    color: var(--light)
 }
 
 .footer-content{
@@ -258,7 +297,6 @@ footer{
 .footer-content h3{
     font-size: 2.4rem;
     line-height: 3rem;
-    color: var(--text);
 }
 
 #copy{
