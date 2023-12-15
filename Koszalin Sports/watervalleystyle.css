@@ -65,6 +65,13 @@ body{
     flex-direction: column;
 }
 
+@media only screen and (max-width: 760px) {
+    .body{
+        width: 100vw;
+    }
+  } 
+
+
 
 html {
     font-size: 10px;
@@ -389,7 +396,7 @@ ul a:hover::after{
     }
 
     .back{
-        margin-top: 15%;
+        margin-top: 20%;
     }
 
     .headline{
