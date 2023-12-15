@@ -92,3 +92,37 @@ var morerLink = document.querySelector('.Morer .More');
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".carousel");
+    let currentIndex = 0;
+    const totalSlides = document.querySelectorAll(".carousel img").length;
+  
+    function showSlide(index) {
+      const newPosition = -index * 100 + "%";
+      carousel.style.transform = "translateX(" + newPosition + ")";
+    }
+  
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      showSlide(currentIndex);
+    }
+  
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      showSlide(currentIndex);
+    }
+  
+    // Ustawienie interwału dla automatycznego przewijania co 3 sekundy
+    const interval = setInterval(nextSlide, 3000);
+  
+    // Optional: Dodanie obsługi zdarzeń dla przycisków nawigacyjnych
+    document.querySelector(".prev").addEventListener("click", function () {
+      clearInterval(interval);
+      prevSlide();
+    });
+  
+    document.querySelector(".next").addEventListener("click", function () {
+      clearInterval(interval);
+      nextSlide();
+    });
+  });

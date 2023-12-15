@@ -226,7 +226,7 @@ ul a:hover::after{
     .bannermobile{
             height: 100vh;
             width: 100vw;
-            background-image: url("img/waterbanner.png");
+            background-image: url("img/sporty.png");
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
