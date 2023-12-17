@@ -43,27 +43,13 @@
     });
 
     document.getElementById('przesunButton').addEventListener('click', function() {
-  // The buttons scrolls you down 300 px
+  // The buttons scrolls the user down 300 px
   window.scrollBy(0, 300);
 });
     
-// Pobierz elementy do manipulacji
+// Hiding blog posts 
 var morerLink = document.querySelector('.Morer .More');
        var container2 = document.querySelector('.container2');
-
-//         // Ustaw obsługę zdarzenia kliknięcia na elemencie More
-//         morerLink.addEventListener('click', function(event) {
-//             event.preventDefault();
-
-//             // Sprawdź aktualny stan widoczności
-//             var isVisible = container2.style.display !== 'none';
-
-//             // Zmiana stanu widoczności na przeciwny
-//             container2.style.display = isVisible ? 'none' : 'block';
-
-//             // Zmiana tekstu w zależności od stanu widoczności
-//             morerLink.textContent = isVisible ? 'Read More' : 'Show Less';
-//         });
 
         document.addEventListener('DOMContentLoaded', function() {
             var morerLink = document.querySelector('.Morer .More');
@@ -91,6 +77,7 @@ var morerLink = document.querySelector('.Morer .More');
   });
 });
 
+// Horizontal Carousel 
 
 document.addEventListener("DOMContentLoaded", function () {
     const carousel = document.querySelector(".carousel");
@@ -112,10 +99,10 @@ document.addEventListener("DOMContentLoaded", function () {
       showSlide(currentIndex);
     }
   
-    // Ustawienie interwału dla automatycznego przewijania co 3 sekundy
+    // Automatic changing of the photos every 3 sec
     const interval = setInterval(nextSlide, 3000);
   
-    // Optional: Dodanie obsługi zdarzeń dla przycisków nawigacyjnych
+    // Powering prev and next buttons (arrows icons)
     document.querySelector(".prev").addEventListener("click", function () {
       clearInterval(interval);
       prevSlide();
